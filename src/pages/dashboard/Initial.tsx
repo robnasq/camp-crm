@@ -1,4 +1,5 @@
 import { OrderedReserves } from "./components/OrderedReserves"
+import { ReservesSujestion } from "./components/ReservesSujestion"
 
 export const Initial = () => {
   return (
@@ -15,9 +16,11 @@ export const Initial = () => {
         <OrderedReserves />
       </section>
       <section>
-        <h2 className="font-bold text-2xl mt-10 mb-2 px-4 text-center">
+        <h2 className="font-bold text-2xl   whitespace-nowrap mt-10 mb-4 px-4 text-center">
           Sujestões de reservas
         </h2>
+        <ReservesSujestion />
+        <ReservesSujestion />
       </section>
       </div>
     

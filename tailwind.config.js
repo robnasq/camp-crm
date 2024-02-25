@@ -7,6 +7,10 @@ export default {
   theme: {
     colors: {
       primary: '#DD0020',
+      secondary: '#463D8C',
+      white: '#FFFFFF',
+      black: '#000000',
+      
     },
 
     fontWeight: {

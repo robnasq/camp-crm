@@ -4,7 +4,10 @@ import { NavMenu } from "../components/nav-menu/NavMenu"
 export const MainLayout = () => {
   return (
     <div>
-        <Outlet />
+      <div className="pb-[56px]">
+      <Outlet />
+      </div>
+      
         <NavMenu />
     </div>
   )
