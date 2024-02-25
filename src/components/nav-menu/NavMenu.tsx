@@ -20,11 +20,11 @@ export const NavMenu = () => {
       />
       <div className={`absolute bottom-[64px] left-0 right-0 px-10  w-[100%] bg-primary transition-all  duration-300 ${menuOpen ? 'h-[91vh] pt-10 ' : 'h-0 '}`}>
         <div className={`text-white font-bold text-start  ${menuOpen ? 'block' : 'hidden'}` }>
-        <MenuItem path={mdiArrowAll} name={'Início reservas'} />
-        <MenuItem path={mdiAccountCircleOutline} name={'Início reservas'} />
-        <MenuItem path={mdiTicket} name={'Início reservas'} />
-        <MenuItem path={mdiCreditCardCheckOutline} name={'Início reservas'} />
-        <MenuItem path={mdiExitToApp} name={'Início reservas'} />
+        <MenuItem onclick={() => setMenuOpen(false)} path={mdiArrowAll} name={'Início reservas'} link={'/'} />
+        <MenuItem onclick={() => setMenuOpen(false)} path={mdiAccountCircleOutline} name={'Perfil'} link={'profile'} />
+        <MenuItem path={mdiTicket} name={'Início reservas'} link={''} />
+        <MenuItem path={mdiCreditCardCheckOutline} name={'Início reservas'} link={''} />
+        <MenuItem path={mdiExitToApp} name={'Início reservas'} link={''} />
 
         </div>
       </div>
