@@ -10,6 +10,13 @@ export default {
       secondary: '#463D8C',
       white: '#FFFFFF',
       black: '#000000',
+      purple: {
+        secondary: '#463D8C',
+      },
+      neutral: {
+        DEFAULT: '#F2F2F2',
+        medium: '#777777',
+    },
       
     },
 
@@ -22,7 +29,7 @@ export default {
     },
 
     boxShadow: {
-      DEFAULT: '2px 2px 10px 4px rgba(0, 0, 0, 0.1)',
+      DEFAULT: '2px 2px 10px 4px rgba(0, 0, 0, 0.2)',
       skeleton: '0px 0px 64px rgba(207, 218, 230, 0.7)',
     },
     extend: {
