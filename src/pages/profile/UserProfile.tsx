@@ -1,5 +1,9 @@
+import Icon from "@mdi/react";
 import { Header } from "../../components/ui/Header";
+import { Tag } from "../../components/ui/Tag";
 import { UserData } from "./components/UserData";
+import { mdiCheck, mdiPencil, mdiPencilOutline, mdiTrashCan, mdiTrashCanOutline } from "@mdi/js";
+import { Button } from "../../components/button/Button";
 
 export const UserProfile = () => {
   return (
@@ -45,7 +49,7 @@ export const UserProfile = () => {
         <hr className="border-primary  border-[4px] my-[52px] " />
         <section>
           <h2 className="font-bold text-3xl mb-8">Dados da faturação</h2>
-          <div className="bg-[#F4F4FB] w-full px-6 py-8 rounded-2xl">
+          <div className="bg-[#F4F4FB] shadow mb-6 w-full px-6 py-8 rounded-2xl">
             <h2 className="text-purple-secondary text-base uppercase text-center font-bold mb-4">
               Encarregado de educação
             </h2>
@@ -72,7 +76,51 @@ export const UserProfile = () => {
                 <p className="font-semibold ">097 675 468</p>
               </span>
             </div>
+            <Tag size="sm" variants={"purple"}>
+              <p>Dados faturação por defeito </p>
+              <Icon path={mdiCheck} size={1} className="text-[#61B232]" />
+            </Tag>
           </div>
+          <div className="bg-white border-neutral border-2 shadow mb-6 w-full px-6 py-8 rounded-2xl">
+            <header className="flex justify-between">
+              <h2 className="text-purple-secondary text-base uppercase text-start font-bold mb-4">
+                Empresa
+              </h2>
+              <span className="flex gap-2 text-[#4198D4]">
+                <Icon path={mdiPencilOutline} size={1} />
+                <Icon path={mdiTrashCanOutline} size={1} />
+              </span>
+            </header>
+            <hr className="border-neutral-medium border-[2px] mb-10" />
+            <div className="flex flex-col ">
+              <span className="mb-6">
+                <p className="uppercase text-[10px] font-bold text-neutral-medium">
+                  Titular
+                </p>
+                <p className="font-semibold ">Equipa MyCamp</p>
+              </span>
+              <span className="mb-6">
+                <p className="uppercase text-[10px] font-bold text-neutral-medium">
+                  Morada
+                </p>
+                <p className="font-semibold ">
+                  Rua da Santa Fé, .º36 2070-024 Pontével
+                </p>
+              </span>
+              <span className="mb-6">
+                <p className="uppercase text-[10px] font-bold text-neutral-medium">
+                  NIF
+                </p>
+                <p className="font-semibold ">097 675 468</p>
+              </span>
+            </div>
+            <Tag size="sm" variants={"neutral"}>
+              <p>Tornar dados faturação por defeito </p>
+            </Tag>
+          </div>
+          <Button type={"button"} variants="update" className="mt-6 mb-[80px]" >
+            Adcionar novos dados faturação
+          </Button>
         </section>
       </div>
     </div>

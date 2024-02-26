@@ -5,7 +5,7 @@ interface IButton {
   size?: "sm" | "md" | "lg";
   type: "button" | "submit" | "reset";
   onClick?: () => void;
-  variants?: "reserve";
+  variants?: "reserve" | 'update';
   fullWidth?: boolean;
   children?: React.ReactNode;
   className?: string;
@@ -36,6 +36,7 @@ export const Button = forwardRef(function Button(
           "w-full": fullWidth === true,
           "px-6 py-4 text-start flex justify-between items-center  bg-[#554AA6] uppercase font-semibold  text-white rounded-3xl":
             variants === "reserve",
+            'rounded-[5px] bg-[#FBBE11] w-full text-white font-[600] py-3 ':  variants === 'update',
         },
         className
       )}
