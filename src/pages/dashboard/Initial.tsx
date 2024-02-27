@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import { OrderedReserves } from "./components/OrderedReserves";
 import { ReservesSujestion } from "./components/ReservesSujestion";
 
 export const Initial = () => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate("/reserve-form")
+  }
+  
   return (
     <div className=" ">
       <header className="px-8 pb-4 rounded-[28px] shadow-[0_10px_10px_rgba(0,0,0,0.09)]">
@@ -18,11 +25,11 @@ export const Initial = () => {
           <OrderedReserves />
         </section>
         <section>
-          <h2 className="font-bold text-2xl   whitespace-nowrap mt-10 mb-4 px-4 text-center">
+          <h2 className="font-bold text-2xl whitespace-nowrap mt-10 mb-4 px-4 text-center">
             Sujestões de reservas
           </h2>
-          <ReservesSujestion />
-          <ReservesSujestion />
+          <ReservesSujestion onClick={handleClick} ButtonType={"button"} />
+          <ReservesSujestion ButtonType={"button"} />
         </section>
       </div>
     </div>
