@@ -9,7 +9,7 @@ export const Header = ({ children }: { children: React.ReactNode }) => {
     navigate(-1);
   };
   return (
-    <div className="shadow rounded-3xl mb-10 w-full items-center justify-between py-6 flex px-10  ">
+    <div className="shadow z-50 relative bg-white rounded-b-3xl mb-10 w-full items-center justify-between py-6 flex px-10  ">
       <span onClick={handleBack}> 
         <Icon
           path={mdiArrowLeftCircleOutline}

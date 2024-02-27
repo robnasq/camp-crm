@@ -2,7 +2,7 @@ import Icon from "@mdi/react";
 import { Header } from "../../components/ui/Header";
 import { Tag } from "../../components/ui/Tag";
 import { UserData } from "./components/UserData";
-import { mdiCheck, mdiPencil, mdiPencilOutline, mdiTrashCan, mdiTrashCanOutline } from "@mdi/js";
+import { mdiCheck, mdiPencilOutline, mdiTrashCan, mdiTrashCanOutline } from "@mdi/js";
 import { Button } from "../../components/button/Button";
 
 export const UserProfile = () => {

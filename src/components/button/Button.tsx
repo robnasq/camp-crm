@@ -5,7 +5,7 @@ interface IButton {
   size?: "sm" | "md" | "lg";
   type: "button" | "submit" | "reset";
   onClick?: () => void;
-  variants?: "reserve" | 'update';
+  variants?: "reserve" | 'update' | 'primary';
   fullWidth?: boolean;
   children?: React.ReactNode;
   className?: string;
@@ -37,6 +37,7 @@ export const Button = forwardRef(function Button(
           "px-6 py-4 text-start flex justify-between items-center  bg-[#554AA6] uppercase font-semibold  text-white rounded-3xl":
             variants === "reserve",
             'rounded-[5px] bg-[#FBBE11] w-full text-white font-[600] py-3 ':  variants === 'update',
+            'bg-primary text-white font-[600] py-[6.5px] px-6 rounded-[10px]': variants === 'primary',
         },
         className
       )}

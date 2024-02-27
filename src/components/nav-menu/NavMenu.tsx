@@ -4,7 +4,7 @@ import Logo from "../../assets/logo-m-mycamp.png";
 import { MenuItem } from "./MenuItem";
 import {
   mdiAccountCircleOutline,
-  mdiArrowAll,
+  mdiApps,
   mdiCreditCardCheckOutline,
   mdiExitToApp,
   mdiTicket,
@@ -14,7 +14,7 @@ export const NavMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="fixed flex justify-between items-center bottom-0 px-2 py-2 w-full bg-primary">
+    <div className="fixed !z-[1000] flex justify-between items-center bottom-0 px-2 py-2 w-full bg-primary">
       <img src={Logo} className="w-10 h-10" alt="Logo" />
       <Hamburger
         color="#fff"
@@ -36,7 +36,7 @@ export const NavMenu = () => {
         >
           <MenuItem
             onclick={() => setMenuOpen(false)}
-            path={mdiArrowAll}
+            path={mdiApps}
             name={"Início reservas"}
             link={"/"}
           />
@@ -46,13 +46,18 @@ export const NavMenu = () => {
             name={"Perfil"}
             link={"profile"}
           />
-          <MenuItem path={mdiTicket} name={"Início reservas"} link={""} />
+          <MenuItem
+            onclick={() => setMenuOpen(false)}
+            path={mdiTicket}
+            name={"Reservas"}
+            link={"reserves"}
+          />
           <MenuItem
             path={mdiCreditCardCheckOutline}
-            name={"Início reservas"}
+            name={"Pagamentos"}
             link={""}
           />
-          <MenuItem path={mdiExitToApp} name={"Início reservas"} link={""} />
+          <MenuItem path={mdiExitToApp} name={"Fechar sessão"} link={""} />
         </div>
       </div>
     </div>

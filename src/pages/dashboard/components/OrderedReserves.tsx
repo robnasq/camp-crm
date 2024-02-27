@@ -1,9 +1,13 @@
 import { mdiAccountMultipleOutline, mdiCalendarMonthOutline } from "@mdi/js";
 import Icon from "@mdi/react";
 
-export const OrderedReserves = () => {
+interface IOrderedReservesProps {
+  onClick?: () => void;
+}
+
+export const OrderedReserves = ({ onClick }: IOrderedReservesProps) => {
   return (
-    <div className="w-[100%] h-[80%] shadow rounded-3xl flex">
+    <div onClick={onClick} className="w-[100%] cursor-pointer my-[24px] h-[80%] shadow rounded-3xl flex">
       <div className="bg-primary  rounded-l-3xl w-[20%]"></div>
       <div className="pb-4">
         <h2 className="font-semibold my-6 mx-3 text-[20px]">
