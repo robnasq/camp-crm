@@ -23,28 +23,34 @@ export const Radio: React.FC<RadioProps> = ({
   };
 
   return (
-    <div>
+    <div className="flex mb-4">
       {options.map((option) => (
-        <label
+        <div
           key={option.value}
-          className="capitalize cursor-pointer inline-block align-middle relative pl-6"
+          className="mr-4 bg-[#463D8C] w-[130px] h-[32] rounded-[40px] py-[7px] px-3 "
         >
-          <span
-            className={`h-[20px] w-[20px] rounded-full border-[3px] border-secondary transition-all duration-300 ease-in-out block relative  ${
-              option.value === selectedValue ? "after:content-[''] after:h-[10px] after:w-[10px] after:bg-secondary after:rounded-full after:block after:absolute after:left-[50%] after:top-[50%] after:transform  after:translate-x-[-50%] after:translate-y-[-50%]" : ""
-            }`}
-          >
-            {option.value === selectedValue ? (<span className="bg-secondary h-[10px] w-[10px] rounded-full" />): (<span />) }
-          </span>
-          <input
-            type="radio"
-            className="hidden"
-            value={option.value}
-            checked={option.value === selectedValue}
-            onChange={() => handleOptionChange(option.value)}
-          />
-          {option.label}
-        </label>
+          <label className="capitalize justify-between cursor-pointer flex items-center">
+            <span className="ml-2 text-white text-[13px] font-medium">
+              {option.label}
+            </span>
+            <div>
+              <span
+                className={`h-[20px] w-[20px] rounded-full border-[3px] border-[#7369C1] transition-all duration-300 ease-in-out block relative  ${
+                  option.value === selectedValue
+                    ? "after:content-[''] after:h-[10px] after:w-[10px] after:bg-[#61B232] after:rounded-full after:block after:absolute after:left-[50%] after:top-[50%] after:transform  after:translate-x-[-50%] after:translate-y-[-50%]"
+                    : ""
+                }`}
+              ></span>
+              <input
+                type="radio"
+                className="hidden"
+                value={option.value}
+                checked={option.value === selectedValue}
+                onChange={() => handleOptionChange(option.value)}
+              />
+            </div>
+          </label>
+        </div>
       ))}
     </div>
   );

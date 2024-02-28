@@ -31,7 +31,7 @@ export default {
 
     boxShadow: {
       DEFAULT: '2px 2px 10px 4px rgba(0, 0, 0, 0.2)',
-      soft: '2px 2px 4px 2px rgba(0, 0, 0, 0.09)',
+      soft: '0px 2px 4px 2px rgba(0, 0, 0, 0.09)',
       skeleton: '0px 0px 64px rgba(207, 218, 230, 0.7)',
     },
     extend: {

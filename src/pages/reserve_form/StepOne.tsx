@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Radio } from "../../components/ui/Radio";
+import { DropDown } from "../../components/ui/DropDown";
 
 const Weeks = () => {
   return (
@@ -30,13 +31,12 @@ const Weeks = () => {
 
 const StepOne = () => {
   const options = [
-    { label: "Option 1", value: "option1" },
-    { label: "Option 2", value: "option2" },
-    { label: "Option 3", value: "option3" },
+    { label: "Sim", value: "option1" },
+    { label: "Não", value: "option2" },
   ];
   const [selectedValue, setSelectedValue] = useState<string>("");
 
-   const handleRadioChange = (value: string) => {
+  const handleRadioChange = (value: string) => {
     setSelectedValue(value);
   };
   return (
@@ -57,15 +57,19 @@ const StepOne = () => {
           <span className="font-semibold text-primary text-2xl mr-3">1.2</span>E
           vem atravéz de algum protocolo?
         </h2>
-        <Radio
-          options={options}
-          selectedValue={selectedValue}
-          onChange={handleRadioChange}
-        />
+        <div className="flex justify-center items-center">
+          <Radio
+            options={options}
+            selectedValue={selectedValue}
+            onChange={handleRadioChange}
+          />
+        </div>
+        {selectedValue === "option1" && (
+          <DropDown options={options} onChange={handleRadioChange} />
+        )}
       </form>
     </div>
   );
 };
 
 export default StepOne;
-
