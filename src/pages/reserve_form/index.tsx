@@ -21,7 +21,8 @@ export const ReserveForm = () => {
     <StepSeven />,
   ];
 
-  const { currentStep, currentComponent, changeStep, isLastStep } = useForm(formComponents);
+  const { currentStep, currentComponent, changeStep, isLastStep } =
+    useForm(formComponents);
   const progressPercent = (currentStep / (formComponents.length - 1)) * 100;
 
   return (
@@ -42,7 +43,7 @@ export const ReserveForm = () => {
           <p>Semanas e protocolos</p>
           <div className="flex items-center space-x-2">
             <span className="text-sm text-black"></span>
-            <div className="flex bg-secondary justify-between items-center pl-[6px] pr-3 h-4 bg-gray-200 rounded-[100px] w-full">
+            <div className="flex mt-3  bg-secondary justify-between items-center pl-[6px] pr-3 h-4 bg-gray-200 rounded-[100px] w-full">
               <div className="bg-[#544C94] w-full h-[6px] mr-4 rounded-full">
                 <div
                   className="h-[6px] bg-[#61B232] flex justify-end items-center rounded-full"
@@ -63,15 +64,14 @@ export const ReserveForm = () => {
         <form className="" onSubmit={(e) => changeStep(currentStep + 1, e)}>
           {currentComponent}
           {!isLastStep ? (
-              <Button type={"submit"} variants="primary" fullWidth>
+            <Button type={"submit"} variants="primary" fullWidth>
               Continuar
             </Button>
           ) : (
             <Button type={"button"} variants="primary" fullWidth>
-            Enviar
-          </Button>
+              Enviar
+            </Button>
           )}
-        
         </form>
       </main>
     </div>
