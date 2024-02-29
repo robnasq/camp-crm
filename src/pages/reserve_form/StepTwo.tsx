@@ -41,7 +41,9 @@ const StepTwo = () => {
   ];
   return (
     <div>
-      <form action="" className="">
+      <form action="" className="">  <h2 className="text-primary font-bold text-2xl mb-8">
+      O encarregado de educação é uma figura fulcral em toda a jornada MyCamp.
+      </h2>
         <h2 className="text-lg mb-6">
           <span className="font-semibold text-primary text-2xl mr-3">2.1</span>
           Quem é o encarregado de educação e quais os seus contactos?{" "}
