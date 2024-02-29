@@ -31,7 +31,7 @@ export const Button = forwardRef(function Button(
       type={type}
       {...props}
       className={clsx(
-        "",
+        "z-[1000]",
         {
           "w-full": fullWidth === true,
           "px-6 py-4 text-start flex justify-between items-center  bg-[#554AA6] uppercase font-semibold  text-white rounded-3xl":

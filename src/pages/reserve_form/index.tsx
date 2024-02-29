@@ -23,6 +23,7 @@ export const ReserveForm = () => {
 
   const { currentStep, currentComponent, changeStep, isLastStep } =
     useForm(formComponents);
+    console.log(changeStep)
   const progressPercent = (currentStep / (formComponents.length - 1)) * 100;
 
   return (
