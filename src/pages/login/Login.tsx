@@ -78,7 +78,7 @@ const Email: React.FC<EmailProps> = ({ email, onEmailChange, onSubmit }) => {
 const Password: React.FC = () => {
   const { email } = useStore();
   return (
-    <div className="px-10 pt-24 pb-16 md:py-16 md:mb-20 lg:mb-32">
+    <div className="px-10 pt-24 pb-16 w-full md:py-16 md:mb-20 lg:mb-32">
       <header className="">
         <h1 className="font-bold text-[64px] text-primary">Quase...</h1>
         <p className="text-[24px] text-neutral-dark font-medium mb-8 mt-4 leading-7">
@@ -138,7 +138,7 @@ export const Login: React.FC = () => {
 
   return (
     <div className="md:flex md:justify-between md:items-center md:overflow-hidden md:h-[100vh]">
-      <div className="md:px-[5%] md:flex  md:items-center md:mt-[60px] ">
+      <div className="md:px-[5%] w-full md:flex  md:items-center md:mt-[60px] ">
       {validEmail ? (
         <Password />
       ) : (

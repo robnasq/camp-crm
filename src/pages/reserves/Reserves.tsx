@@ -37,7 +37,7 @@ export const Reserves = () => {
         <section className="">
             <h2 className="font-bold text-[24px]">Historico</h2>
         </section>
-        <div className="">
+        <div className="md:flex gap-3">
             <OrderedReserves onClick={navToReserve} />
             <OrderedReserves />
         </div>

@@ -9,11 +9,11 @@ export const Header = ({ children }: { children: React.ReactNode }) => {
     navigate(-1);
   };
   return (
-    <div className="shadow z-50 relative bg-white rounded-b-3xl mb-10 w-full items-center justify-between py-6 flex px-10  ">
+    <div className="max-md:shadow z-50 relative bg-white rounded-b-3xl mb-10 w-full items-center max-md:justify-between py-6 flex px-10  ">
       <span onClick={handleBack}> 
         <Icon
           path={mdiArrowLeftCircleOutline}
-          className="text-[#ccc] font-light cursor-pointer"
+          className="text-[#ccc] md:hidden font-light cursor-pointer"
           title="Go back"
           size={2}
         />

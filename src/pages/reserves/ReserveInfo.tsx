@@ -9,19 +9,20 @@ import MainImage from '../../assets/main-image.jpeg'
 export const ReserveInfo = () => {
   const id = useParams();
   return (
+    
     <div>
       <Header>
         <div className="">
-          <h2 className="font-bold text-2xl text-end text-primary">Reservas</h2>
+          <h2 className="font-bold text-2xl md:text-start text-end text-primary">Reservas</h2>
           <p className="text-end">Informação da reserva</p>
         </div>
       </Header>
-      <div className=" z-10 rounded-b-[14px] -top-16 relative h-[196px] w-full">
-        <img src={MainImage} alt="Kids playing" className="h-full w-full object-cover rounded-b-[14px]" />
+      <div className=" z-10 rounded-b-[14px] -top-16 md:top-0 md:hidden relative h-[196px] w-full">
+        <img src={MainImage} alt="Kids playing" className="h-full w-full object-cover md:hidden rounded-b-[14px]" />
       </div>
       <div className="px-10 pb-5">
-        <section className="">
-          <h2 className="font-bold mb-8 text-3xl text-center">
+        <section className="md">
+          <h2 className="font-bold mb-8 md:text-start text-3xl text-center">
             Campos de férias 2024
           </h2>
           <span className="flex items-center justify-between">

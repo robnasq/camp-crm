@@ -9,11 +9,13 @@ import { ReserveForm } from "../pages/reserve_form";
 import { OrderCompleted } from "../pages/reserve_form/OrderCompleted";
 import { Login } from "../pages/login/Login";
 import { SignUp } from "../pages/register/SignUp";
+import Foto from '../assets/main-image.jpeg'
+import Pattern from '../assets/pattern.png'
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />,
+    element: <MainLayout backgroundPattern={Pattern} />,
     children: [
       {
         path: "/",
