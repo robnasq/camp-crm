@@ -13,14 +13,13 @@ interface EmailProps {
   onSubmit: (e: FormEvent<HTMLFormElement>) => void;
 }
 
-
 interface Store {
   email: string;
   setEmail_: (email: string) => void;
 }
 
 export const useStore = create<Store>((set) => ({
-  email: '',
+  email: "",
   setEmail_: (email) => set({ email }),
 }));
 
@@ -29,7 +28,7 @@ const Email: React.FC<EmailProps> = ({ email, onEmailChange, onSubmit }) => {
     <div className="px-10 py-[80px] mb-[90px]">
       <header className="">
         <h1 className="font-bold text-[64px] text-primary">Olá.</h1>
-        <p className="text-[24px] text-neutral-dark leading-7">
+        <p className="text-[24px] text-neutral-dark font-medium leading-7">
           Bem-vindo(a) à área de cliente My Camp!
         </p>
       </header>
@@ -75,18 +74,53 @@ const Email: React.FC<EmailProps> = ({ email, onEmailChange, onSubmit }) => {
   );
 };
 const Password: React.FC = () => {
- const {email} = useStore()
+  const { email } = useStore();
   return (
-    <div className="px-10 mb-[90px]">
-      <Input type={"number"} variants="neutral" fullwidth placeholder="Senha" />
-      <Input type={"email"} value={email} variants="neutral" fullwidth  />
+    <div className="px-10 py-[80px] mb-[90px]">
+      <header className="">
+        <h1 className="font-bold text-[64px] text-primary">Quase...</h1>
+        <p className="text-[24px] text-neutral-dark font-medium mb-8 mt-4 leading-7">
+          Insira sua <br /> palavra passe.
+        </p>
+      </header>
+      <div className="mb-[90px]">
+        <form action="" className="">
+          <Link to={"/"} className="text-primary font-medium text-[13px]">
+            Esqueceu-se da palavra-passe?
+          </Link>
+          <div className="mt-4">
+            <Input
+              type={"email"}
+              placeholder={email}
+              aria-disabled
+              aria-readonly
+              value={email}
+              variants="neutral"
+              fullwidth
+            />
+            <Input
+              type={"password"}
+              variants="neutral"
+              fullwidth
+              placeholder="Senha"
+            />
+          </div>
+          <Button type="submit" variants="primary" fullWidth className="mt-4">Continuar</Button>
+          <span className="text-[14px] my-2 flex justify-center gap-3 items-center text-neutral-medium">
+            <p>Sem conta My Camp?</p>
+            <Link to={"/"} className="text-primary">
+              Criar conta
+            </Link>
+            </span>
+        </form>
+      </div>
     </div>
   );
 };
 export const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
- const {setEmail_} = useStore()
+  const { setEmail_ } = useStore();
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -96,7 +130,7 @@ export const Login: React.FC = () => {
     e.preventDefault();
 
     const isValidEmail = email.includes("@");
-    setEmail_(email)
+    setEmail_(email);
     setValidEmail(isValidEmail);
   };
 
