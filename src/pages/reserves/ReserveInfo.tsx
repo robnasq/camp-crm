@@ -4,6 +4,7 @@ import Icon from "@mdi/react";
 import { mdiAccountMultipleOutline, mdiCalendarMonthOutline } from "@mdi/js";
 import { Tag } from "../../components/ui/Tag";
 import { PersonDropDown } from "./components/PersonDropDown";
+import MainImage from '../../assets/main-image.jpeg'
 
 export const ReserveInfo = () => {
   const id = useParams();
@@ -15,7 +16,9 @@ export const ReserveInfo = () => {
           <p className="text-end">Informação da reserva</p>
         </div>
       </Header>
-      <div className="bg-primary z-10 rounded-b-[14px] -top-16 relative h-[196px] w-full"></div>
+      <div className=" z-10 rounded-b-[14px] -top-16 relative h-[196px] w-full">
+        <img src={MainImage} alt="Kids playing" className="h-full w-full object-cover rounded-b-[14px]" />
+      </div>
       <div className="px-10 pb-5">
         <section className="">
           <h2 className="font-bold mb-8 text-3xl text-center">

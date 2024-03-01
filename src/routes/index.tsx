@@ -6,6 +6,8 @@ import { Reserves } from "../pages/reserves/Reserves";
 import { ReserveInfo } from "../pages/reserves/ReserveInfo";
 import { Payments } from "../pages/payment/Payments";
 import { ReserveForm } from "../pages/reserve_form";
+import { OrderCompleted } from "../pages/reserve_form/OrderCompleted";
+import { Login } from "../pages/login/Login";
 
 export const router = createBrowserRouter([
   {
@@ -36,6 +38,14 @@ export const router = createBrowserRouter([
         path: 'reserve-form',
         element: <ReserveForm />,
       },
-    ],
+      {
+        path: 'order-completed',
+        element: <OrderCompleted /> ,
+      },
+    ]
   },
+  {
+    path: "/login",
+    element: <Login />,
+  }
 ]);

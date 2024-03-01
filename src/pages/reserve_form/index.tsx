@@ -9,8 +9,13 @@ import StepSeven from "./StepSeven";
 import StepSix from "./StepSix";
 import StepThree from "./StepThree";
 import StepTwo from "./StepTwo";
+import MainImage from "../../assets/main-image.jpeg";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const ReserveForm = () => {
+  const [subtittle, setSubtittle] = useState("");
+
   const formComponents = [
     <StepOne />,
     <StepTwo />,
@@ -23,8 +28,43 @@ export const ReserveForm = () => {
 
   const { currentStep, currentComponent, changeStep, isLastStep } =
     useForm(formComponents);
-    console.log(changeStep)
+  console.log(changeStep);
   const progressPercent = (currentStep / (formComponents.length - 1)) * 100;
+
+  const navigate = useNavigate();
+
+  const conclusion = () => {
+    navigate("/order-completed");
+  };
+
+  useEffect(() => {
+    switch (currentStep) {
+      case 0:
+        setSubtittle("Semanas e protocolos");
+        break;
+      case 1:
+        setSubtittle("Encarregado de edecação");
+        break;
+      case 2:
+        setSubtittle("Participante");
+        break;
+      case 3:
+        setSubtittle("Saúde");
+        break;
+      case 4:
+        setSubtittle("Opções reserva");
+        break;
+      case 5:
+        setSubtittle("Dados de faturação");
+        break;
+      case 6:
+        setSubtittle("Sumário e adição de participantes");
+        break;
+      default:
+        setSubtittle("");
+        break;
+    }
+  }, [currentStep]);
 
   return (
     <div>
@@ -41,7 +81,7 @@ export const ReserveForm = () => {
           <h1 className="text-primary text-end text-base font-bold">
             Reserva campos de feerias 20224
           </h1>
-          <p>Semanas e protocolos</p>
+          <p>{subtittle} </p>
           <div className="flex items-center space-x-2">
             <span className="text-sm text-black"></span>
             <div className="flex mt-3  bg-secondary justify-between items-center pl-[6px] pr-3 h-4 bg-gray-200 rounded-[100px] w-full">
@@ -59,8 +99,12 @@ export const ReserveForm = () => {
           </div>
         </div>
       </header>
-      <div className="bg-primary z-10 rounded-b-[14px] -top-16 relative h-[196px] w-full"></div>
-
+      <div className="z-10 rounded-b-[14px] -top-16 relative h-[196px] w-full">
+        <img
+          src={MainImage}
+          className="w-full h-full object-cover rounded-b-[14px]"
+        />
+      </div>
       <main className="px-10">
         <form className="" onSubmit={(e) => changeStep(currentStep + 1, e)}>
           {currentComponent}
@@ -69,8 +113,13 @@ export const ReserveForm = () => {
               Continuar
             </Button>
           ) : (
-            <Button type={"button"} variants="primary" fullWidth>
-              Enviar
+            <Button
+              type={"button"}
+              onClick={conclusion}
+              variants="primary"
+              fullWidth
+            >
+              Concluir
             </Button>
           )}
         </form>
