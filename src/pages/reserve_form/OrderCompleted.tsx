@@ -1,6 +1,6 @@
 import Icon from "@mdi/react";
 import MainImage from "../../assets/main-image.jpeg";
-import { mdiCheckCircle, mdiCheckCircleOutline } from "@mdi/js";
+import {mdiCheckCircleOutline } from "@mdi/js";
 import { Button } from "../../components/button/Button";
 
 export const OrderCompleted = () => {

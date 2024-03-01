@@ -8,6 +8,7 @@ import { Payments } from "../pages/payment/Payments";
 import { ReserveForm } from "../pages/reserve_form";
 import { OrderCompleted } from "../pages/reserve_form/OrderCompleted";
 import { Login } from "../pages/login/Login";
+import { SignUp } from "../pages/register/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -47,5 +48,9 @@ export const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
-  }
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
+  },
 ]);

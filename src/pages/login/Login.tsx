@@ -1,6 +1,8 @@
 import Google from "./assets/google.png";
 import Facebook from "./assets/facebook.png";
 import Instagram from "./assets/instagram.png";
+import MainLoginImg from './assets/main-ogin-img.jpeg'
+
 import { create } from "zustand";
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Input } from "../../components/input/Input";
@@ -25,7 +27,7 @@ export const useStore = create<Store>((set) => ({
 
 const Email: React.FC<EmailProps> = ({ email, onEmailChange, onSubmit }) => {
   return (
-    <div className="px-10 py-[80px] mb-[90px]">
+    <div className="px-10 w-full py-[80px] mb-[90px]">
       <header className="">
         <h1 className="font-bold text-[64px] text-primary">Olá.</h1>
         <p className="text-[24px] text-neutral-dark font-medium leading-7">
@@ -76,7 +78,7 @@ const Email: React.FC<EmailProps> = ({ email, onEmailChange, onSubmit }) => {
 const Password: React.FC = () => {
   const { email } = useStore();
   return (
-    <div className="px-10 py-[80px] mb-[90px]">
+    <div className="px-10 pt-24 pb-16 md:py-16 md:mb-20 lg:mb-32">
       <header className="">
         <h1 className="font-bold text-[64px] text-primary">Quase...</h1>
         <p className="text-[24px] text-neutral-dark font-medium mb-8 mt-4 leading-7">
@@ -135,7 +137,8 @@ export const Login: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="md:flex md:justify-between md:items-center md:overflow-hidden md:h-[100vh]">
+      <div className="md:px-[5%] md:flex  md:items-center md:mt-[60px] ">
       {validEmail ? (
         <Password />
       ) : (
@@ -145,6 +148,8 @@ export const Login: React.FC = () => {
           onSubmit={handleSubmit}
         />
       )}
+      </div>
+      <img src={MainLoginImg} alt="" className="max-md:hidden md:w-[60%] md:h-[100vh] object-cover"   />
     </div>
   );
 };
