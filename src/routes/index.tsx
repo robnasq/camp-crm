@@ -12,6 +12,7 @@ import { SignUp } from "../pages/register/SignUp";
 import Foto from "../assets/main-image.jpeg";
 import Pattern from "../assets/pattern.png";
 import { OrderReserveLayout } from "../layouts/OrderReserveLayout";
+import { RecoverPassword } from "../pages/recover_pssword/RecoverPassword";
 
 export const router = createBrowserRouter([
   {
@@ -67,5 +68,9 @@ export const router = createBrowserRouter([
   {
     path: "/signup",
     element: <SignUp />,
+  },
+  {
+    path: 'recover-password',
+    element: <RecoverPassword />
   },
 ]);

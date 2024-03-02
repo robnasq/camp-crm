@@ -122,6 +122,7 @@ const Password: React.FC = () => {
 export const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
+
   const { setEmail_ } = useStore();
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
