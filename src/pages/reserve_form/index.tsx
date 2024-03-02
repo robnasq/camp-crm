@@ -34,7 +34,7 @@ export const ReserveForm = () => {
   const navigate = useNavigate();
 
   const conclusion = () => {
-    navigate("/order-completed");
+    navigate("/form/order-completed");
   };
 
   useEffect(() => {
@@ -105,7 +105,7 @@ export const ReserveForm = () => {
           className="w-full h-full object-cover rounded-b-[14px]"
         />
       </div>
-      <main className="px-10">
+      <main className="px-10 md:max-w-[522px]">
         <form className="" onSubmit={(e) => changeStep(currentStep + 1, e)}>
           {currentComponent}
           {!isLastStep ? (

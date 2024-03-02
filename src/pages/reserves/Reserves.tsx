@@ -9,8 +9,8 @@ export const Reserves = () => {
   const navigate = useNavigate();
 
   const navToReserve = () => {
-    navigate(`/reserves/${1}`)
-  }
+    navigate(`/reserves/${1}`);
+  };
   return (
     <div>
       <Header>
@@ -35,11 +35,11 @@ export const Reserves = () => {
           </Button>
         </div>
         <section className="">
-            <h2 className="font-bold text-[24px]">Historico</h2>
+          <h2 className="font-bold text-[24px]">Historico</h2>
         </section>
         <div className="md:flex gap-3">
-            <OrderedReserves onClick={navToReserve} />
-            <OrderedReserves />
+          <OrderedReserves onClick={navToReserve} />
+          <OrderedReserves />
         </div>
       </main>
     </div>

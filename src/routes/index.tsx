@@ -9,8 +9,9 @@ import { ReserveForm } from "../pages/reserve_form";
 import { OrderCompleted } from "../pages/reserve_form/OrderCompleted";
 import { Login } from "../pages/login/Login";
 import { SignUp } from "../pages/register/SignUp";
-import Foto from '../assets/main-image.jpeg'
-import Pattern from '../assets/pattern.png'
+import Foto from "../assets/main-image.jpeg";
+import Pattern from "../assets/pattern.png";
+import { OrderReserveLayout } from "../layouts/OrderReserveLayout";
 
 export const router = createBrowserRouter([
   {
@@ -26,26 +27,38 @@ export const router = createBrowserRouter([
         element: <UserProfile />,
       },
       {
-        path: 'reserves',
+        path: "reserves",
         element: <Reserves />,
       },
       {
-        path: 'reserves/:id',
+        path: "reserves/:id",
         element: <ReserveInfo />,
       },
       {
-        path: 'payments',
-        element: <Payments /> ,
+        path: "payments",
+        element: <Payments />,
       },
+    ],
+  },
+  {
+    path: "/order-completed",
+    element: <MainLayout backgroundPattern={Foto} />,
+    children: [
       {
-        path: 'reserve-form',
+        index: true,
+        element: <OrderCompleted />,
+      },
+    ],
+  },
+  {
+    path: "/form",
+    element: <OrderReserveLayout />,
+    children: [
+      {
+        path: "reserve-form",
         element: <ReserveForm />,
       },
-      {
-        path: 'order-completed',
-        element: <OrderCompleted /> ,
-      },
-    ]
+    ],
   },
   {
     path: "/login",

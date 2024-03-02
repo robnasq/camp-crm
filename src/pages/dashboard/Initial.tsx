@@ -6,7 +6,7 @@ export const Initial = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/reserve-form");
+    navigate("/form/reserve-form");
   };
 
   return (

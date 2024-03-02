@@ -6,7 +6,7 @@ import { Button } from "../../components/button/Button";
 export const OrderCompleted = () => {
   return (
     <div>
-      <div className=" z-10 rounded-b-[14px] -top-2 relative h-[196px] w-full">
+      <div className=" z-10 rounded-b-[14px] md:hidden -top-2 relative h-[196px] w-full">
         <img
           src={MainImage}
           alt="Kids playing"
@@ -20,6 +20,13 @@ export const OrderCompleted = () => {
           />
         </span>
       </div>
+        <span className="bg-[#C5F4AA] rounded-full w-[50px] h-[50px] absolute top-[18%] max-md:hidden left-[33%]">
+          <Icon
+            path={mdiCheckCircleOutline}
+            size={2}
+            className="relative left-[1px] top-[1px] text-[#269C2C]"
+          />
+        </span>
       <div className="px-10">
         <h2 className="font-bold text-primary text-[36px] mt-[130px] leading-9">
           Pedido <br /> concluido

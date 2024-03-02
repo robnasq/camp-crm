@@ -3,31 +3,39 @@ import { Radio } from "../../components/ui/Radio";
 import { DropDown } from "../../components/ui/DropDown";
 
 const Weeks = () => {
+  const [isChecked, setIsChecked] = useState(false);
+ 
+  const toggleCheckbox = () => {
+     setIsChecked(!isChecked);
+  };
+ 
   return (
-    <div className="w-full shadow py-3 pl-4 rounded-[10px] mb-2 pr-6">
-      <div className=" flex items-center justify-between">
-        <div className="rounded-full w-5 h-5 bg-[#FBBE11]"></div>
-        <div>
-          <p className="font-semibold text-[18px]">1 a 6 de julho</p>
-          <p className="text-neutral-medium text-sm font-bold uppercase">
-            Pré esgotada
-          </p>
-        </div>
-        <div>
-          <div className="flex items-center mb-4">
-            <input
-              id="default-checkbox"
-              type="checkbox"
-              value=""
-              className="w-5 h-5 mt-4 cursor-pointer border-neutral-medium rounded"
-            />
-            <label className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
-          </div>
-        </div>
-      </div>
-    </div>
+     <label className="w-full shadow py-3 pl-4 rounded-[10px] mb-2 pr-6 cursor-pointer" htmlFor="default-checkbox" onClick={toggleCheckbox}>
+       <div className="flex items-center justify-between">
+         <div className="rounded-full w-5 h-5 bg-[#FBBE11]"></div>
+         <div>
+           <p className="font-semibold text-[18px]">1 a 6 de julho</p>
+           <p className="text-neutral-medium text-sm font-bold uppercase">
+             Pré esgotada
+           </p>
+         </div>
+         <div>
+           <div className="flex items-center mb-4">
+             <input
+               id="default-checkbox"
+               type="checkbox"
+               checked={isChecked}
+               onChange={toggleCheckbox} // This is optional if you're controlling the checkbox state
+               className="w-5 h-5 mt-4 cursor-pointer border-neutral-medium rounded"
+             />
+             <label className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+           </div>
+         </div>
+       </div>
+     </label>
   );
-};
+ };
+ 
 
 const StepOne = () => {
   const options = [
@@ -49,8 +57,17 @@ const StepOne = () => {
           <span className="font-semibold text-primary text-2xl mr-3">1.1</span>
           Escolha a semana ou as semnas que pretende reservar
         </h2>
-        <Weeks />
-
+        <div className="md:grid md:grid-cols-2 flex flex-col md:gap-4">
+          <Weeks />
+          <Weeks />
+          <Weeks />
+          <Weeks />
+          <Weeks />
+          <Weeks />
+          <Weeks />
+          <Weeks />
+          <Weeks />
+        </div>
         <hr className="border-primary border-4 my-8" />
 
         <h2 className="text-lg mb-6">

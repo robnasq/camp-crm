@@ -56,7 +56,7 @@ export const NavMenu = () => {
             onclick={() => setMenuOpen(false)}
             path={mdiCreditCardCheckOutline}
             name={"Pagamentos"}
-            link={"payments"}
+            link={"/payments"}
           />
           <MenuItem path={mdiExitToApp} name={"Fechar sessão"} link={""} />
         </div>
