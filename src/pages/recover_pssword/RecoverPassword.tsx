@@ -4,6 +4,7 @@ import MainLoginImg from "../../assets/main-image.jpeg";
 import { Button } from "../../components/button/Button";
 import Icon from "@mdi/react";
 import { mdiCheckCircleOutline } from "@mdi/js";
+import { useNavigate } from "react-router-dom";
 
 interface NewPasswordProps {
   onPasswordSubmit: () => void;
@@ -54,6 +55,11 @@ const NewPassword: React.FC<NewPasswordProps> = ({ onPasswordSubmit }) => {
 };
 
 const Success = () => {
+  const navigate = useNavigate();
+
+  const nav = () => {
+    navigate("/login");
+  }
   return (
     <div>
       <div className="">
@@ -70,7 +76,7 @@ const Success = () => {
       A sua nova palavra-passe foi criada e já está associada à sua conta.
       </p>
       <p className="my-3 font-semibold text-neutral-medium leading-[18px] ">Valide se recebeu o seu email de confirmação e inicie sessão com as suas novas credenciais.</p>
-      <Button type="button" variants="primary" fullWidth  >Iniciar sessão</Button>
+      <Button type="button" onClick={nav} variants="primary" fullWidth  >Iniciar sessão</Button>
     </div>
   );
 };
