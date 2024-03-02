@@ -2,20 +2,26 @@ import Icon from "@mdi/react";
 import { Header } from "../../components/ui/Header";
 import { Tag } from "../../components/ui/Tag";
 import { UserData } from "./components/UserData";
-import {
-  mdiCheck,
-  mdiPencilOutline,
-  mdiTrashCan,
-  mdiTrashCanOutline,
-} from "@mdi/js";
+import { mdiCheck, mdiPencilOutline, mdiTrashCanOutline } from "@mdi/js";
 import { Button } from "../../components/button/Button";
+import { Link, useNavigate } from "react-router-dom";
 
 export const UserProfile = () => {
+  const navigate = useNavigate();
+
+  const navToBilling = () => {
+    navigate("/data-biling");
+  };
+  const navToStartOfSection = () => {
+    navigate("/start-of-section");
+  };
   return (
     <div className="md:w-full">
       <Header>
         <div className="md:text-start">
-          <h1 className="text-primary md:text-start text-end text-xl font-bold">Perfil</h1>
+          <h1 className="text-primary md:text-start text-end text-xl font-bold">
+            Perfil
+          </h1>
           <p>Definições gerais</p>
         </div>
       </Header>
@@ -51,6 +57,16 @@ export const UserProfile = () => {
           />
           <UserData placeholder="875 908 456" label="NIF" variants="outline" />
         </form>
+        <hr className="border-primary  border-[4px] my-[52px] " />
+        <h2 className="font-bold text-2xl my-8 md:text-start text-center ">
+          Início de sessão
+        </h2>
+        <UserData
+          placeholder="********"
+          label="palavra-passe"
+          variants="outline"
+          onClick={navToStartOfSection}
+        />
         <hr className="border-primary  border-[4px] my-[52px] " />
         <section>
           <h2 className="font-bold text-3xl mb-8">Dados da faturação</h2>
@@ -93,8 +109,12 @@ export const UserProfile = () => {
                   Empresa
                 </h2>
                 <span className="flex gap-2 text-[#4198D4]">
-                  <Icon path={mdiPencilOutline} size={1} />
-                  <Icon path={mdiTrashCanOutline} size={1} />
+                  <button onClick={navToBilling}>
+                    <Icon path={mdiPencilOutline} size={1} />
+                  </button>
+                  <button>
+                    <Icon path={mdiTrashCanOutline} size={1} />
+                  </button>
                 </span>
               </header>
               <hr className="border-neutral-medium border-[2px] mb-10" />

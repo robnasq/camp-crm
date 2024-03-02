@@ -32,7 +32,7 @@ export const Input = forwardRef(function Input(
         {label && <span className={clsx('block',
         {
           'text-neutral-medium  text-[10px] mb-6 top-1 font-bold uppercase': variants === 'outline',
-          'font-bold text-black text-[12px] mb-4 ml-1 ': variants === 'neutral',
+          'font-bold text-neutral-medium text-[12px] mb-2 ml-1 ': variants === 'neutral',
         },
         )}>{label}</span>}
       <input

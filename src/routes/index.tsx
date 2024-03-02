@@ -13,6 +13,8 @@ import Foto from "../assets/main-image.jpeg";
 import Pattern from "../assets/pattern.png";
 import { OrderReserveLayout } from "../layouts/OrderReserveLayout";
 import { RecoverPassword } from "../pages/recover_pssword/RecoverPassword";
+import { StartOfSection } from "../pages/profile/StartOfSection";
+import { DataBiling } from "../pages/profile/DataBiling";
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +28,14 @@ export const router = createBrowserRouter([
       {
         path: "profile",
         element: <UserProfile />,
+      },
+      {
+        path: "start-of-section",
+        element: <StartOfSection />,
+      },
+      {
+        path: "data-biling",
+        element: <DataBiling />,
       },
       {
         path: "reserves",
