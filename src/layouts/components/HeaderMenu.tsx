@@ -10,19 +10,8 @@ import {
 } from "@mdi/js";
 import Icon from "@mdi/react";
 
-interface DropdownItemProps {
- img: string;
- text: string;
-}
 
-const DropdownItem: React.FC<DropdownItemProps> = ({ img, text }) => {
- return (
-    <li className="flex items-center space-x-2">
-      <img src={img} alt={text} className="w-5 h-5" />
-      <a className="text-sm text-gray-700">{text}</a>
-    </li>
- );
-};
+
 
 export const NavMenu: React.FC = () => {
  const [open, setOpen] = useState(false);

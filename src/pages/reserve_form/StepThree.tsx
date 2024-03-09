@@ -13,7 +13,7 @@ const StepThree = () => {
     { label: "Espanha", value: "option2" },
   ];
 
-  const [gender, setGender] = useState<string>("");
+  const [, setGender] = useState<string>("");
   const [languages, setLanguages] = useState<string[]>([]);
   const [otherLanguage, setOtherLanguage] = useState<string>("");
 

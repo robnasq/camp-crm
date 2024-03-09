@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export function useForm(steps: any) {
   const [currentStep, setCurrentStep] = useState(0);
-  const [currentComponent, setCurrentComponent] = useState(steps[currentStep]);
+  const [] = useState(steps[currentStep]);
 
   function changeStep(i: number, e: any) {
     e.preventDefault()

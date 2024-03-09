@@ -1,4 +1,3 @@
-import { ReserveForm } from "../pages/reserve_form";
 import Pattern from "../assets/main-image.jpeg";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";

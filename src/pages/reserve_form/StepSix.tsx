@@ -8,7 +8,7 @@ const StepSix = () => {
     { label: "Outros dados de faturacação", value: "option2" },
     { label: "Fatura sem NIF", value: "option2" },
   ];
-  const [selectedValue, setSelectedValue] = useState<string>("");
+  const [, setSelectedValue] = useState<string>("");
 
   const handleDropChange = (value: string) => {
     setSelectedValue(value);

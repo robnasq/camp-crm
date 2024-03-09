@@ -28,7 +28,7 @@ const StepTwo = () => {
     );
     setContactNumbers(updatedContactNumbers);
   };
-  const [selectedValue, setSelectedValue] = useState<string>("");
+  const [, setSelectedValue] = useState<string>("");
 
   const handleDrop= (value: string) => {
     setSelectedValue(value);

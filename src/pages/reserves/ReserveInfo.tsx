@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import { Header } from "../../components/ui/Header";
 import Icon from "@mdi/react";
 import { mdiAccountMultipleOutline, mdiCalendarMonthOutline } from "@mdi/js";
@@ -7,7 +6,6 @@ import { PersonDropDown } from "./components/PersonDropDown";
 import MainImage from '../../assets/main-image.jpeg'
 
 export const ReserveInfo = () => {
-  const id = useParams();
   return (
     
     <div>

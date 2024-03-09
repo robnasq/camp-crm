@@ -1,6 +1,6 @@
 import { mdiChevronDown } from "@mdi/js";
 import Icon from "@mdi/react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface DropDownProps {
   options: { value: string; label: string }[];
@@ -11,7 +11,6 @@ interface DropDownProps {
 export const DropDown: React.FC<DropDownProps> = ({
   options,
   onChange,
-  selectedValue,
 }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState('Selecione');

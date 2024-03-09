@@ -11,7 +11,7 @@ const StepFive = () => {
     { label: "Glaping", value: "option2", imageUrl: Glaping },
   ];
 
-  const [checkin, setCheckin] = useState<string>("");
+  const [, setCheckin] = useState<string>("");
 
   const handleCheckinChange = (value: string) => {
     setCheckin(value);

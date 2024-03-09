@@ -4,7 +4,7 @@ import React, { forwardRef } from "react";
 interface IButton {
   size?: "sm" | "md" | "lg";
   type: "button" | "submit" | "reset";
-  onClick?: () => void;
+  onClick?: any;
   variants?: "reserve" | 'update' | 'primary';
   fullWidth?: boolean;
   children?: React.ReactNode;

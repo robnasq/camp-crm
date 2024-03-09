@@ -83,7 +83,7 @@ const Success = () => {
 
 export const RecoverPassword: React.FC = () => {
   const [email, setEmail] = useState<string>("");
-  const [showPasswordFields, setShowPasswordFields] = useState<boolean>(false);
+  const [] = useState<boolean>(false);
   const [validEmail, setValidEmail] = useState<boolean>(false);
   const [passwordSuccess, setPasswordSuccess] = useState<boolean>(false);
 

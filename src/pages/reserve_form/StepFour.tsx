@@ -31,10 +31,11 @@ const StepFour = () => {
     setRestrictions(updatedrestrictions);
   };
 
-  const handleChangeCondition = (id: number, value: string) => {
+  const handleChangeCondition = (id: number, value: any) => {
     const updateCondition = condition.map((item) =>
       item.id === id ? { ...item, condition: value } : item
     );
+    seetCondition(updateCondition);
   };
   const removerestriction = (id: number) => {
     const updatedrestrictions = restrictions.filter((item) => item.id !== id);

@@ -4,7 +4,7 @@ import { Tag } from "../../components/ui/Tag";
 import { UserData } from "./components/UserData";
 import { mdiCheck, mdiPencilOutline, mdiTrashCanOutline } from "@mdi/js";
 import { Button } from "../../components/button/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const UserProfile = () => {
   const navigate = useNavigate();
